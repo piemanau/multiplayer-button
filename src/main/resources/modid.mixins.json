@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.limeshulkerbox.multiplayerbutton.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "AddButtonMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
