@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "multiplayer-button",
   "version": "${version}",
 
   "name": "Multiplayer Button",
