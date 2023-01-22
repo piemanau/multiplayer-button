@@ -1,13 +1,14 @@
 package com.limeshulkerbox.multiplayerbutton.mixin;
 
 import net.minecraft.client.gui.screen.GameMenuScreen;
-import net.minecraft.client.gui.screen.MessageScreen;
+import net.minecraft.client.gui.screen.SaveLevelScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.TitleScreen;
 import net.minecraft.client.gui.screen.multiplayer.MultiplayerScreen;
 import net.minecraft.client.gui.screen.multiplayer.MultiplayerWarningScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -55,7 +56,7 @@ private void init(CallbackInfo info)
 	}
 	assert lowestButton1 != null;
 	assert lowestButton2 != null;
-	this.addDrawableChild(new ButtonWidget(this.width / 2 - 102, lowestY1, 204, lowestButton1.getHeight(), Text.translatable("menu.multiplayer"), (buttonWidget) ->
+	this.addDrawableChild(new ButtonWidget(this.width / 2 - 102, lowestY1, 204, lowestButton1.getHeight(), new TranslatableText("menu.multiplayer"), (buttonWidget) ->
 	{
 		//copied from return to title screen
 		{
@@ -64,7 +65,7 @@ private void init(CallbackInfo info)
 			buttonWidget.active = false;
 			assert this.client.world != null;
 			this.client.world.disconnect();
-			if (bl1) this.client.disconnect(new MessageScreen(Text.translatable("menu.savingLevel")));
+			if (bl1) this.client.disconnect(new SaveLevelScreen(new TranslatableText("menu.savingLevel")));
 			else this.client.disconnect();
 
 			/*if (bl1) {
