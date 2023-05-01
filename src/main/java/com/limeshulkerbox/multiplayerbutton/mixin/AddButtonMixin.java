@@ -23,7 +23,6 @@ protected AddButtonMixin(Text title) {
 @Inject(at = @At("TAIL"), method = "initWidgets")
 private void init(CallbackInfo info)
 {
-	System.out.println("This line is printed by an example mod mixin!");
 	assert this.client != null;
 	boolean bl = this.client.isMultiplayerEnabled();
 	int lowestY3 = 0;
