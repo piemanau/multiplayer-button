@@ -1,4 +1,4 @@
-package com.limeshulkerbox.multiplayerbutton;
+package dev.pieman.multiplayerbutton;
 
 import net.fabricmc.api.ModInitializer;
 

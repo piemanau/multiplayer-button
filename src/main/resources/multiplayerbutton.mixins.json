@@ -1,12 +1,13 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.limeshulkerbox.multiplayerbutton.mixin",
+  "package": "dev.pieman.multiplayerbutton.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],
   "client": [
-    "AddButtonMixin"
+    "AddButtonMixin",
+    "SaveWorldOnServerJoin"
   ],
   "injectors": {
     "defaultRequire": 1
